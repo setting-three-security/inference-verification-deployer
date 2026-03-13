@@ -1,0 +1,25 @@
+shim-version: v0.4.2@sha256:d65f769e37bbe86ffaeef42120c29c4b9de33415fcd7588a9ef7a64f609aa2a3
+cvm-version: 0.6.9
+cpus: 8
+memory: 65536
+
+containers:
+  - name: "inference-verifier"
+    image: "ghcr.io/setting-three-security/inference-verification-tee:v0.9.2@sha256:8206276b120ddda09e238b63be9e533d1c4172a01700b360f6c7d753ae715db3" 
+    runtime: nvidia
+    gpus: all
+    secrets:
+      - HF_TOKEN
+
+shim:
+  listen-port: 443
+  upstream-port: 8080
+  paths:
+    - /verify
+    - /verify-stream
+    - /query
+    - /verify-text
+    - /verify-text-stream
+    - /health
+    - /config
+    - /ui
