@@ -5,11 +5,12 @@ memory: 65536
 
 containers:
   - name: "inference-verifier"
-    image: "ghcr.io/setting-three-security/inference-verification-tee:v0.9.2@sha256:8206276b120ddda09e238b63be9e533d1c4172a01700b360f6c7d753ae715db3"
+    image: "ghcr.io/setting-three-security/inference-verification-tee:v0.9.4@sha256:sha256:968d06a41da27a4d85c1866b4d390e3b5925fe754964d742e7315081ced08420"
     runtime: nvidia
     gpus: all
     secrets:
       - HF_TOKEN
+      - OPENROUTER_DEMO
 
 shim:
   listen-port: 443
