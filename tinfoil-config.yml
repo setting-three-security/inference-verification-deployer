@@ -1,7 +1,7 @@
-shim-version: v0.4.2@sha256:d65f769e37bbe86ffaeef42120c29c4b9de33415fcd7588a9ef7a64f609aa2a3
-cvm-version: 0.6.9
-cpus: 8
+cvm-version: 0.7.3
 memory: 65536
+cpus: 8
+gpus: 1
 
 containers:
   - name: "inference-verifier"
@@ -13,7 +13,6 @@ containers:
       - OPENROUTER_DEMO
 
 shim:
-  listen-port: 443
   upstream-port: 8080
   paths:
     - /verify
