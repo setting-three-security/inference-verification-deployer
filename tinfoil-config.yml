@@ -5,7 +5,7 @@ gpus: 1
 
 containers:
   - name: "inference-verifier"
-    image: "ghcr.io/setting-three-security/inference-verification-tee:v0.9.18@sha256:06eb357c5dc9ae6de444ffec7b57d4f50d3e70b5c84ba9ebb4a9c9d5c8a39c7a"
+    image: "ghcr.io/setting-three-security/inference-verification-tee:v0.9.19@sha256:084a203c23b6448e1ccf7bdba7866f8ca281b0b4b627041a89a6939fb202e5ed"
     runtime: nvidia
     gpus: all
     secrets:
